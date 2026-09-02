@@ -1,0 +1,8 @@
+import yt_dlp
+url = input("masukan url video")
+ydl_opts = {
+    "format": "136",
+    "outtmpl": "%(title)s.%(ext)s"
+}
+with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+	ydl.download([url])
